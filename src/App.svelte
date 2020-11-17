@@ -5,6 +5,7 @@
 	page("/", () => current = Home);
 	page();
 </script>
+
 <style>
 	main {
 		background: #444;
@@ -56,6 +57,10 @@
 	header {
 		padding: 0.5rem 0.75rem;
 		border-bottom: #FF6347 0.15rem solid;
+	}
+
+	#main-content {
+		margin: 1rem 2rem;
 	}
 </style>
 
