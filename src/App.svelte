@@ -2,7 +2,9 @@
 	let current = null;
 	import page from "page";
 	import Home from "./Home.svelte"
+	import ForgotPasswordPage from "./ForgotPasswordPage.svelte"
 	page("/", () => current = Home);
+	page("/forgot-password", () => current = ForgotPasswordPage)
 	page();
 </script>
 
@@ -62,15 +64,23 @@
 	#main-content {
 		margin: 1rem 2rem;
 	}
+
+	header a {
+		color: inherit;
+		text-decoration: none;
+	}
 </style>
 
 <main>
 	<header>
-		<span id="text-logo">Buja</span>
+		<a href="/" id="text-logo">Buja</a>
 		<nav>
 			<input id="menu-checkbox" type="checkbox" />
 			<label id="menu-button" for="menu-checkbox"></label>
-			<div>...<!-- TODO: Add list of link within menu here --></div>
+			<div>
+				<a href="/forgot-password">Forgot Password Page</a>
+				<!-- TODO: Add list of link within menu here -->
+			</div>
 		</nav>
 	</header>
 	<div id="main-content">
