@@ -1,5 +1,9 @@
 <script>
-
+	let current = null;
+	import page from "page";
+	import Home from "./Home.svelte"
+	page("/", () => current = Home);
+	page();
 </script>
 <style>
 	main {
@@ -24,11 +28,11 @@
 		letter-spacing: 0.125em;
 	}
 
-	input:not(:checked) ~ #menu-button::before {
+	#menu-checkbox:not(:checked) ~ #menu-button::before {
 		content: "|||";
 	}
 
-	input:checked ~ #menu-button:before {
+	#menu-checkbox:checked ~ #menu-button:before {
 		content: "X";
 	}
 
@@ -65,6 +69,6 @@
 		</nav>
 	</header>
 	<div id="main-content">
-		Hi...
+		<svelte:component this={current} />
 	</div>
 </main>
