@@ -3,8 +3,10 @@
 	import page from "page";
 	import Home from "./Home.svelte"
 	import ForgotPasswordPage from "./ForgotPasswordPage.svelte"
+	import LoginPage from "./LoginPage.svelte"
 	page("/", () => current = Home);
 	page("/forgot-password", () => current = ForgotPasswordPage)
+	page("/login", () => current = LoginPage)
 	page();
 </script>
 
@@ -78,7 +80,8 @@
 			<input id="menu-checkbox" type="checkbox" />
 			<label id="menu-button" for="menu-checkbox"></label>
 			<div>
-				<a href="/forgot-password">Forgot Password Page</a>
+				<a href="/forgot-password">Forgot Password Page</a><br/>
+				<a href="/login">Login</a>
 				<!-- TODO: Add list of link within menu here -->
 			</div>
 		</nav>
