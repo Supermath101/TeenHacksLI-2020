@@ -2,6 +2,10 @@
 
 </script>
 <style>
+	body {
+		font-family: "Mulish", sans-serif;
+	}
+
 	main {
 		background: #444;
 		width: 100%;
@@ -25,11 +29,11 @@
 	}
 
 	input:not(:checked) ~ #menu-button::before {
-		content: "|||";
+		content: "| | |";
 	}
 
 	input:checked ~ #menu-button:before {
-		content: "X";
+		content: "|||";
 	}
 
 
@@ -38,6 +42,11 @@
 	}
 	#menu-checkbox:not(:checked) + * + div {
 		display: none;
+	}
+
+	#welcome {
+		text-align: center; 
+		font-size: 800;
 	}
 
 	#text-logo {
@@ -51,20 +60,25 @@
 
 	header {
 		padding: 0.5rem 0.75rem;
-		border-bottom: #FF6347 0.15rem solid;
+		border-bottom: #FF6347 0.3rem solid;
 	}
 </style>
 
 <main>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
 	<header>
-		<span id="text-logo">Buja</span>
+		
 		<nav>
 			<input id="menu-checkbox" type="checkbox" />
 			<label id="menu-button" for="menu-checkbox"></label>
-			<div>...<!-- TODO: Add list of link within menu here --></div>
+			<div>
+				<span id="welcome">Buja</span>
+				<></p>
+			</div>
 		</nav>
 	</header>
 	<div id="main-content">
-		Hi...
+		<div id="">
 	</div>
 </main>
